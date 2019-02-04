@@ -25,7 +25,6 @@
         <br />
         <div class="form-row">
             <div class="form-group col-sm-11">
-                <asp:Button ID="ultimaBtn" type="button" class="btn btn-info" runat="server" Text="Última Consulta"  />
                 <asp:Button type="button" class="btn btn-light" ID="btnHistorialClinico" runat="server"  Text="Historial Clínico" />
 
             </div>
@@ -44,6 +43,40 @@
             <br />
             <br />
         </div>
+         
+
+          <div>
+            <asp:Label ID="lblFechaIngreso" runat="server" Font-Bold="True" Text="Fecha de Ingreso"></asp:Label>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-sm-4">
+                <label for="txtDiaIngreso">Día</label><asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtDiaIngreso" ErrorMessage="Campo obligatorio" ValidationGroup="guardar" ForeColor="Red"></asp:RequiredFieldValidator>
+                &nbsp;<label for="txtDiaIngreso"><asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server" ControlToValidate="txtDiaIngreso" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="\d*\.?\d*" ValidationGroup="guardar">Únicamente números</asp:RegularExpressionValidator>
+                </label>
+                <asp:TextBox type="text" class="form-control" ID="txtDiaIngreso" runat="server" MaxLength="2" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+
+            </div>
+
+            <div class="form-group col-sm-4">
+                <label for="txtMesIngreso">Mes</label><asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtMesIngreso" ErrorMessage="Campo obligatorio" ValidationGroup="guardar" ForeColor="Red"></asp:RequiredFieldValidator>
+                &nbsp;<label for="txtMesIngreso"><asp:RegularExpressionValidator ID="RegularExpressionValidator9" runat="server" ControlToValidate="txtMesIngreso" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="\d*\.?\d*" ValidationGroup="guardar">Únicamente números</asp:RegularExpressionValidator>
+                </label>
+                <asp:TextBox type="text" class="form-control" ID="txtMesIngreso" runat="server" MaxLength="2" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+
+            </div>
+            <div class="form-group col-sm-4">
+                <label for="txtAnnoIngreso">Año</label><asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtAnnoIngreso" ErrorMessage="Campo obligatorio" ValidationGroup="guardar" ForeColor="Red"></asp:RequiredFieldValidator>
+                &nbsp;<asp:RegularExpressionValidator ID="RegularExpressionValidator10" runat="server" ControlToValidate="txtAnnoIngreso" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="\d*\.?\d*" ValidationGroup="guardar">Únicamente números</asp:RegularExpressionValidator>
+                <asp:TextBox type="text" class="form-control" ID="txtAnnoIngreso" runat="server" MaxLength="4" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+
+            </div>
+        </div>
+
+
+
+
+
+
 
         <div class="form-row">
             <div class="form-group col-sm-6">
@@ -92,68 +125,15 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <label for="phoneText">Teléfono</label>
-            <asp:TextBox type="text" class="form-control" ID="phoneText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
-        </div>
-
-        <div class="form-group">
-            <label for="tel2">Teléfono 2</label>
-            <asp:TextBox type="text" class="form-control" ID="tel2" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
-        </div>
-
-        <div class="form-group">
-            <label for="descripcionTel2">Descripción teléfono 2</label>
-            <asp:TextBox type="text" class="form-control" ID="descripcionTel2" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
-        </div>
-
-        <div class="form-group">
-            <label for="tel2">Teléfono 3</label>
-            <asp:TextBox type="text" class="form-control" ID="tel3" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
-        </div>
-
-        <div class="form-group">
-            <label for="descripcionTel3">Descripción teléfono 3</label>
-            <asp:TextBox type="text" class="form-control" ID="descripcionTel3" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
-        </div>
-
-        <div>
-            <asp:Label ID="Label3" runat="server" Font-Bold="True" Text="Dirección"></asp:Label>
-        </div>
-
-        <div class="form-row">
-            <div class="form-group col-sm-4">
-                <label for="provinciaText">Provincia</label>
-                <asp:TextBox type="text" class="form-control" ID="provinciaText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
-
-            </div>
-            <div class="form-group col-sm-4">
-                <label for="cantonText">Cantón</label>
-                <%--<asp:TextBox type="text" class="form-control" ID="cantonText" runat="server" OnTextChanged="cantonText_TextChanged" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>--%>
-
-            </div>
-            <div class="form-group col-sm-4">
-                <label for="distritoText">Distrito</label>
-                <asp:TextBox type="text" class="form-control" ID="distritoText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
-
-            </div>
-        </div>
-
-
-        <div class="form-group ">
-            <label for="otrasText">Otras Señas</label>
-            <asp:TextBox type="text" class="form-control" ID="otrasText" runat="server" TextMode="MultiLine" BorderColor="#16ACB8" BorderStyle="Solid"></asp:TextBox>
-
-        </div>
-
-        <div>
+         <div>
             <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="Fecha de Nacimiento"></asp:Label>
         </div>
         <div class="form-row">
             <div class="form-group col-sm-4">
-                <%--<label for="diaText">Día</label><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="diaText" ErrorMessage="Campo obligatorio" ValidationGroup="guardar" ForeColor="Red"></asp:RequiredFieldValidator>--%>
-                <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="diaText" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="\d*\.?\d*" ValidationGroup="guardar">Únicamente números</asp:RegularExpressionValidator>--%>
-                &nbsp;<%--<asp:TextBox type="text" class="form-control" ID="diaText" runat="server" MaxLength="2" BorderColor="#16ACB8" BorderStyle="Solid" OnTextChanged="diaText_TextChanged" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>--%>
+                <label for="diaText">Día</label><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="diaText" ErrorMessage="Campo obligatorio" ValidationGroup="guardar" ForeColor="Red"></asp:RequiredFieldValidator>
+                &nbsp;<label for="diaText"><asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="diaText" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="\d*\.?\d*" ValidationGroup="guardar">Únicamente números</asp:RegularExpressionValidator>
+                </label>
+                <asp:TextBox type="text" class="form-control" ID="diaText" runat="server" MaxLength="2" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
 
             </div>
 
@@ -171,28 +151,47 @@
 
             </div>
         </div>
+         <div class="form-row">
+           <div class="form-group col-sm-4">
+     
+            <label for="phoneText">Teléfono</label>
+            <asp:TextBox type="text" class="form-control" ID="telefText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+        </div>
 
+        <div class="form-group col-sm-4">
+            <label for="tel2">Celular</label>
+            <asp:TextBox type="text" class="form-control" ID="celularText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+        </div>
 
-        <div class="form-group">
-            <label for="religionText">Religión</label>
-            <asp:TextBox type="text" class="form-control" ID="religionText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+        <div class="form-group col-sm-4">
+            <label for="descripcionTel2">Otro teléfono</label>
+            <asp:TextBox type="text" class="form-control" ID="otroTelefText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+        </div>
+               </div>
 
+        <div>
+            <asp:Label ID="lblDomicilio" runat="server" Font-Bold="False" Text="Domicilio"></asp:Label>
         </div>
 
 
-        <div class="form-group">
+        <div class="form-group ">
+           <asp:TextBox type="text" class="form-control" ID="otrasText" runat="server" TextMode="MultiLine" BorderColor="#16ACB8" BorderStyle="Solid"></asp:TextBox>
+
+        </div>
+          <div class="form-row">
+        <div class="form-group col-sm-6">
             <label for="estadoCivilText">Estado Civil</label>
             <asp:TextBox type="text" class="form-control" ID="estadoCivilText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
 
         </div>
 
 
-        <div class="form-group">
-            <label for="trabajoText">Tipo de trabajo</label>
+        <div class="form-group col-sm-6">
+            <label for="trabajoText">Ocupación</label>
             <asp:TextBox type="text" class="form-control" ID="trabajoText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
 
         </div>
-
+</div>
 
         <div class="form-group col-sm-4">
             <label for="sexoText">Sexo</label>
