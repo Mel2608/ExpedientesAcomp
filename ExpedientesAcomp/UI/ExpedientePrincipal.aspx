@@ -71,13 +71,6 @@
 
             </div>
         </div>
-
-
-
-
-
-
-
         <div class="form-row">
             <div class="form-group col-sm-6">
                 <label for="firstNameText">Primer Nombre</label>
@@ -172,17 +165,22 @@
         <div>
             <asp:Label ID="lblDomicilio" runat="server" Font-Bold="False" Text="Domicilio"></asp:Label>
         </div>
-
-
         <div class="form-group ">
            <asp:TextBox type="text" class="form-control" ID="otrasText" runat="server" TextMode="MultiLine" BorderColor="#16ACB8" BorderStyle="Solid"></asp:TextBox>
-
         </div>
+          <div>
+            <asp:Label ID="lblContacto" runat="server" Font-Bold="False" Text="Contacto de Emergencia"></asp:Label>
+        </div>
+         <div class="form-group ">
+                    <asp:TextBox type="text" class="form-control" ID="txtContacto" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+        </div>
+         
+
           <div class="form-row">
         <div class="form-group col-sm-6">
             <label for="estadoCivilText">Estado Civil</label>
             <asp:TextBox type="text" class="form-control" ID="estadoCivilText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
-
+            <a href="ExpedientePrincipal.aspx">ExpedientePrincipal.aspx</a>
         </div>
 
 
@@ -205,7 +203,7 @@
         <div class="form-group offset-sm-6">
             <asp:Button ID="guardarBtn" type="button" class="btn btn-danger" runat="server" Text="Guardar"  ValidationGroup="guardar" />
         </div>
-    </div>
+ 
     <br />
 
 

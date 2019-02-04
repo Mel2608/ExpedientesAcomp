@@ -31,6 +31,7 @@ namespace TO
         public String domicilio { get; set; }
         //public String alergias { get; set; }
         public DateTime fechaIngreso;
+        public String contactoEmergencia { get; set; }
 
 
         public TOExpediente()
@@ -38,7 +39,7 @@ namespace TO
 
         }
 
-        public TOExpediente(string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, DateTime fecha_nacimiento, string num_telefono, string celular, string otro_telefono, string estado_civil, string ocupacion, string sexo, string domicilio, DateTime fechaIngreso)
+        public TOExpediente(string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, DateTime fecha_nacimiento, string num_telefono, string celular, string otro_telefono, string estado_civil, string ocupacion, string sexo, string domicilio, DateTime fechaIngreso, string contactoEmergencia)
         {
             this.cedula = cedula;
             this.primer_nombre = primer_nombre;
@@ -54,6 +55,7 @@ namespace TO
             this.domicilio = domicilio;
             this.sexo = sexo;
             this.fechaIngreso = fechaIngreso;
+            this.contactoEmergencia = contactoEmergencia;
         }
 
     }

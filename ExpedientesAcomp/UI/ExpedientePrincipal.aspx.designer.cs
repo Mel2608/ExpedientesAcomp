@@ -400,6 +400,24 @@ namespace UI {
         protected global::System.Web.UI.WebControls.TextBox otrasText;
         
         /// <summary>
+        /// Control lblContacto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblContacto;
+        
+        /// <summary>
+        /// Control txtContacto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtContacto;
+        
+        /// <summary>
         /// Control estadoCivilText.
         /// </summary>
         /// <remarks>
