@@ -13,5 +13,10 @@ namespace UI
         {
 
         }
+
+        protected void btnHistorialClinico_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("HistorialClinico.aspx");
+        }
     }
 }

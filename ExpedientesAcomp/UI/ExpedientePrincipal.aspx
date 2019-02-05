@@ -25,7 +25,7 @@
         <br />
         <div class="form-row">
             <div class="form-group col-sm-11">
-                <asp:Button type="button" class="btn btn-light" ID="btnHistorialClinico" runat="server"  Text="Historial Clínico" />
+                <asp:Button type="button" class="btn btn-info" ID="btnHistorialClinico" runat="server"  Text="Historial Clínico" OnClick="btnHistorialClinico_Click" />
 
             </div>
             <div class="form-group col-sm-1">
