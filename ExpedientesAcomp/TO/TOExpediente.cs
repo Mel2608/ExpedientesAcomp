@@ -29,7 +29,6 @@ namespace TO
         public String ocupacion { get; set; }
         public String sexo { get; set; }
         public String domicilio { get; set; }
-        //public String alergias { get; set; }
         public DateTime fechaIngreso;
         public String contactoEmergencia { get; set; }
 

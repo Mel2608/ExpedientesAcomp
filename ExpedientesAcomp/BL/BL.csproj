@@ -42,9 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLExpediente.cs" />
+    <Compile Include="BLFisicoTerapia.cs" />
     <Compile Include="BLHistorialClinico.cs" />
+    <Compile Include="BLHojaEvolucion.cs" />
     <Compile Include="BLManejadorExpediente.cs" />
     <Compile Include="BLManejadorHistorialClinico.cs" />
+    <Compile Include="BLManejadorHojaEvolucion.cs" />
+    <Compile Include="BLManejadorPsicologia.cs" />
+    <Compile Include="BLManejadorTerapiaFisica.cs" />
+    <Compile Include="BLPsicologia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

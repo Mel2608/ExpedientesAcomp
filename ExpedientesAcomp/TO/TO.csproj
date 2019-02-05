@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TOHojaEvolucion.cs" />
+    <Compile Include="TOTerapiaFisica.cs" />
     <Compile Include="TOHistorialClinico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TOExpediente.cs" />
+    <Compile Include="TOPsicologia.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

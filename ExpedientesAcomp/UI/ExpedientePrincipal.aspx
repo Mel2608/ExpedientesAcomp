@@ -180,7 +180,7 @@
         <div class="form-group col-sm-6">
             <label for="estadoCivilText">Estado Civil</label>
             <asp:TextBox type="text" class="form-control" ID="estadoCivilText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
-            <a href="ExpedientePrincipal.aspx">ExpedientePrincipal.aspx</a>
+          <%--  <a href="ExpedientePrincipal.aspx">ExpedientePrincipal.aspx</a>--%>
         </div>
 
 

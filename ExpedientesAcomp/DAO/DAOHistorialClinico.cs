@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    class DAOHistorialClinico
+    public class DAOHistorialClinico
     {
     }
 }
