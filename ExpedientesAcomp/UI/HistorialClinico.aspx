@@ -155,6 +155,10 @@
         </div>
          <br />
          <br />
+          <div class="form-group offset-sm-6">
+            <asp:Button ID="guardarBtn" type="button" class="btn btn-danger" runat="server" Text="Guardar"  ValidationGroup="guardar" />
+        </div>
+        <br />
 
     </div>
 
