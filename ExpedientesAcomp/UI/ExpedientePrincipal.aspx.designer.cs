@@ -22,13 +22,13 @@ namespace UI {
         protected global::System.Web.UI.WebControls.Button btnHistorialClinico;
         
         /// <summary>
-        /// Control historialBtn.
+        /// Control consultaslBtn.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button historialBtn;
+        protected global::System.Web.UI.WebControls.Button consultaslBtn;
         
         /// <summary>
         /// Control mensajeError.

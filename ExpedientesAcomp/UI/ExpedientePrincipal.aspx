@@ -29,7 +29,7 @@
 
             </div>
             <div class="form-group col-sm-1">
-                <asp:Button type="button" class="btn btn-light" ID="historialBtn" runat="server" Text="Consultas"  />
+                <asp:Button type="button" class="btn btn-light" ID="consultaslBtn" runat="server" Text="Consultas"  />
             </div>
         </div>
         <br />
