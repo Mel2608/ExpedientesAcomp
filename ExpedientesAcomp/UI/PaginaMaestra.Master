@@ -17,19 +17,21 @@
 </head>
 <body>
     <form id="form1" runat="server">
+     
+
 
           <nav class="navbar navbar-expand-lg navbar-light bg-info">
             <a class="navbar-brand" href="PaginaPrincipal.aspx">
                 <%--<img src="img/logo.png" height="50" class="d-inline-block align-top" alt="">--%>
-                <asp:Image ID="logo" src="img/logo.png" height="50" class="d-inline-block align-top" alt="" OnClick="cambiar" runat="server" />
+                <asp:Image ID="logo" src="img/logoPrincipal.png" height="50" class="d-inline-block align-top" alt="" runat="server" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <%--<a class="navbar-brand" href="#">Hidden brand</a>--%>
+                <%--<a class="navbar-brand" href="#<a href="HojaEvolucion.aspx">HojaEvolucion.aspx</a>">Hidden brand</a>--%>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <%--  <li class="nav-item active">
+                    <%--  <li class="nav-item active"><a href="PaginaMaestra.Master">PaginaMaestra.Master</a>
                         <a class="nav-link" href="PaginaPrincipal.aspx">Inicio <span class="sr-only">(current)</span></a>
                     </li>--%>
                    
