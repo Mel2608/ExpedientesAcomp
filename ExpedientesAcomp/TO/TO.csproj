@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TOHojaEvolucion.cs" />
+    <Compile Include="TONutricion.cs" />
     <Compile Include="TOTerapiaFisica.cs" />
     <Compile Include="TOHistorialClinico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

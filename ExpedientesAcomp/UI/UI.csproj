@@ -79,6 +79,7 @@
     <Content Include="HistorialClinico.aspx" />
     <Content Include="HojaEvolucion.aspx" />
     <Content Include="img\logoPrincipal.png" />
+    <Content Include="Nutricion.aspx" />
     <Content Include="Psicologia.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -234,6 +235,13 @@
     </Compile>
     <Compile Include="HojaEvolucion.aspx.designer.cs">
       <DependentUpon>HojaEvolucion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nutricion.aspx.cs">
+      <DependentUpon>Nutricion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nutricion.aspx.designer.cs">
+      <DependentUpon>Nutricion.aspx</DependentUpon>
     </Compile>
     <Compile Include="PaginaMaestra.Master.cs">
       <DependentUpon>PaginaMaestra.Master</DependentUpon>

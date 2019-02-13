@@ -48,8 +48,10 @@
     <Compile Include="BLManejadorExpediente.cs" />
     <Compile Include="BLManejadorHistorialClinico.cs" />
     <Compile Include="BLManejadorHojaEvolucion.cs" />
+    <Compile Include="BLManejadorNutricion.cs" />
     <Compile Include="BLManejadorPsicologia.cs" />
     <Compile Include="BLManejadorTerapiaFisica.cs" />
+    <Compile Include="BLNutricion.cs" />
     <Compile Include="BLPsicologia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

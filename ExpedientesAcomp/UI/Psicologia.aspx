@@ -34,21 +34,21 @@
             <asp:TextBox type="text" class="form-control" ID="txtTratamientos" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}" Rows="3" TextMode="MultiLine"></asp:TextBox>
         </div>
         <br />
-          <div>
+        <div>
             <asp:Label ID="lblMotivoConsulta" runat="server" Font-Bold="False" Text="Motivo de consulta/ sintomatología: "></asp:Label>
         </div>
         <div class="form-group ">
             <asp:TextBox type="text" class="form-control" ID="txtMotivoConsulta" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}" Rows="5" TextMode="MultiLine"></asp:TextBox>
         </div>
         <br />
-            <div>
+        <div>
             <asp:Label ID="lblComposiciónFamiliar" runat="server" Font-Bold="False" Text="Composición familiar: "></asp:Label>
         </div>
         <div class="form-group ">
             <asp:TextBox type="text" class="form-control" ID="txtComposicFam" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}" Rows="5" TextMode="MultiLine"></asp:TextBox>
         </div>
         <br />
-         <div>
+        <div>
             <asp:Label ID="lblLaborEduc" runat="server" Font-Bold="False" Text="Aspectos Laborales y educativos: "></asp:Label>
         </div>
         <div class="form-group ">
@@ -62,33 +62,33 @@
             <asp:TextBox type="text" class="form-control" ID="txtHistPersonal" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}" Rows="8" TextMode="MultiLine"></asp:TextBox>
         </div>
         <br />
-         <div>
+        <div>
             <asp:Label ID="lblDiagPresuntiv" runat="server" Font-Bold="False" Text="Impresión Diágnostica presuntiva/Psicodinamia: "></asp:Label>
         </div>
         <div class="form-group ">
             <asp:TextBox type="text" class="form-control" ID="txtDiagPresuntiv" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}" Rows="5" TextMode="MultiLine"></asp:TextBox>
         </div>
         <br />
-          <div>
+        <div>
             <asp:Label ID="lblObjsTerap" runat="server" Font-Bold="False" Text="Objetivos terapéuticos: "></asp:Label>
         </div>
         <div class="form-group ">
             <asp:TextBox type="text" class="form-control" ID="txtObjsTerapeuticos" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}" Rows="5" TextMode="MultiLine"></asp:TextBox>
         </div>
-         <br />
-          <div>
+        <br />
+        <div>
             <asp:Label ID="lblTratamiento" runat="server" Font-Bold="False" Text="Tratamiento empleado: "></asp:Label>
         </div>
         <div class="form-group ">
             <asp:TextBox type="text" class="form-control" ID="txtTratamiento" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
         </div>
 
-              <br />
-               <br />
-                <div class="form-group offset-sm-6">
-            <asp:Button ID="guardarBtn" type="button" class="btn btn-danger" runat="server" Text="Guardar"  ValidationGroup="guardar" />
+        <br />
+        <br />
+        <div class="form-group offset-sm-6">
+            <asp:Button ID="guardarBtn" type="button" class="btn btn-danger" runat="server" Text="Guardar" ValidationGroup="guardar" />
         </div>
-               <br />
+        <br />
 
 
     </div>
