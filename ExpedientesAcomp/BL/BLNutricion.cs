@@ -47,7 +47,54 @@ namespace BL
         public int REE { get; set; }
         public string recomendacionesNutricionales { get; set; }
 
+        public BLNutricion()
+        {
 
+        }
+
+        public BLNutricion(string ced, int idNutric, double pesoResul, string pesoEvaluac, double tallaResult, string tallaEvaluac, double IMCResult, string IMCEvaluac, 
+            double pesoIdealResult, string pesoIdealEvaluac, string APP, string AHF, string medicam, string cirugias, bool alimnNoGust, string alimentNoGusCual, 
+            string alimentoNoGustPorq, string alimentoPref, bool tomaAgua, double vasosDia, bool producLight, string producLightCual, string productLightPorq, 
+            string alimentCaeMal, string alimentCaeMalPorq, bool tomaLicor, string tomaLicorCuantasSeman, string tomaLicorCantidad, bool fuma, string fumaCuantSemana, 
+            bool actividFisica, string actividadFisicaFrecuenc, string activFisicaTipoActividad, string Dx_Nutricional, int REE, string recomendNutricionales)
+        {
+            this.cedula = ced;
+            this.idNutricion = idNutric;
+            this.pesoResultado = pesoResul;
+            this.pesoEvaluacion = pesoEvaluac;
+            this.tallaResultado = tallaResult;
+            this.tallaevaluacion = tallaEvaluac;
+            this.IMCResultado = IMCResult;
+            this.IMCevaluacion = IMCEvaluac;
+            this.pesoIdealResultado = pesoIdealResult;
+            this.pesoIdealevaluacion = pesoIdealEvaluac;
+            this.APP = APP;
+            this.AHF = AHF;
+            this.medicamentos = medicam;
+            this.cirugias = cirugias;
+            this.alimentoNoGuste = alimnNoGust;
+            this.alimentoNoGusteCual = alimentNoGusCual;
+            this.alimentoNoGustePorque = alimentoNoGustPorq;
+            this.alimentPreferidos = alimentoPref;
+            this.tomaAgua = tomaAgua;
+            this.vasosAlDia = vasosAlDia;
+            this.productLight = producLight;
+            this.productLightCual = producLightCual;
+            this.productLightPorque = productLightPorq;
+            this.alimentCaenMal = alimentCaeMal;
+            this.alimentCaenMalPorque = alimentCaeMalPorq;
+            this.tomaLicor = tomaLicor;
+            this.tomaLicorCuantasSemana = tomaLicorCuantasSeman;
+            this.tomaLicorTipoCantidad = tomaLicorCantidad;
+            this.fuma = fuma;
+            this.fumaCuantasSemana = fumaCuantSemana;
+            this.actividadFisica = actividFisica;
+            this.activFisicaFrecuencia = actividadFisicaFrecuenc;
+            this.activFisicaTipoActividad = activFisicaTipoActividad;
+            this.DX_Nutricional = Dx_Nutricional;
+            this.REE = REE;
+            this.recomendacionesNutricionales = recomendNutricionales;
+        }
 
 
     }
