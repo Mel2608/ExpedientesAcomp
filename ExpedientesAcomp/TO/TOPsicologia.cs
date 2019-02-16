@@ -10,6 +10,7 @@ namespace TO
     {
         public int id_psicologia { get; set; }
         public string cedula { get; set; }
+        public int idExpediente { get; set; }
         public string diagnostico_medico { get; set; }
         public string tratamientos { get; set; }
         public string motivo_consulta { get; set; }
@@ -27,11 +28,12 @@ namespace TO
 
         }
 
-        public TOPsicologia(int id_psicologia, string cedula, string diagnostico_medico, string tratamientos, string motivo_consulta, string composicion_familiar, string laboral_educativos,
+        public TOPsicologia(int id_psicologia, string cedula, int idExpediente, string diagnostico_medico, string tratamientos, string motivo_consulta, string composicion_familiar, string laboral_educativos,
             string historiaPersonal, string diagnosticoPresuntivo, string objs_Terapeuticos, string tratamient_Empleado, string expediente)
         {
             this.id_psicologia = id_psicologia;
             this.cedula = cedula;
+            this.idExpediente = idExpediente;
             this.historiaPersonal = historiaPersonal;
             this.diagnosticoPresuntivo = diagnosticoPresuntivo;
             this.objs_Terapeuticos = objs_Terapeuticos;

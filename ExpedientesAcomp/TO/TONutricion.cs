@@ -10,6 +10,7 @@ namespace TO
     {
         public string cedula { get; set; }
         public int idNutricion { get; set; }
+        public int idExpediente { get; set; }
         public double pesoResultado { get; set; }
         public string pesoEvaluacion { get; set; }
         public double tallaResultado { get; set; }
@@ -52,7 +53,7 @@ namespace TO
 
         }
 
-        public TONutricion(string ced, int idNutric, double pesoResul, string pesoEvaluac, double tallaResult, string tallaEvaluac, double IMCResult, string IMCEvaluac,
+        public TONutricion(string ced, int idNutric, int idExpediente, double pesoResul, string pesoEvaluac, double tallaResult, string tallaEvaluac, double IMCResult, string IMCEvaluac,
             double pesoIdealResult, string pesoIdealEvaluac, string APP, string AHF, string medicam, string cirugias, bool alimnNoGust, string alimentNoGusCual,
             string alimentoNoGustPorq, string alimentoPref, bool tomaAgua, double vasosDia, bool producLight, string producLightCual, string productLightPorq,
             string alimentCaeMal, string alimentCaeMalPorq, bool tomaLicor, string tomaLicorCuantasSeman, string tomaLicorCantidad, bool fuma, string fumaCuantSemana,
@@ -60,6 +61,7 @@ namespace TO
         {
             this.cedula = ced;
             this.idNutricion = idNutric;
+            this.idExpediente = idExpediente;
             this.pesoResultado = pesoResul;
             this.pesoEvaluacion = pesoEvaluac;
             this.tallaResultado = tallaResult;

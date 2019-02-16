@@ -8,6 +8,7 @@ namespace BL
 {
     public class BLExpediente
     {
+        public int numExpediente { get; set; }
         public String cedula { get; set; }
         public String primer_nombre { get; set; }
         public String segundo_nombre { get; set; }
@@ -38,8 +39,9 @@ namespace BL
 
         }
 
-        public BLExpediente(string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, DateTime fecha_nacimiento, string num_telefono, string celular, string otro_telefono, string estado_civil, string ocupacion, String sexo, string domicilio, DateTime fechaIngreso, string contactoEmergencia)
+        public BLExpediente(int numeroExpediente, string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, DateTime fecha_nacimiento, string num_telefono, string celular, string otro_telefono, string estado_civil, string ocupacion, String sexo, string domicilio, DateTime fechaIngreso, string contactoEmergencia)
         {
+            this.numExpediente = numeroExpediente;
             this.cedula = cedula;
             this.primer_nombre = primer_nombre;
             this.segundo_nombre = segundo_nombre;
