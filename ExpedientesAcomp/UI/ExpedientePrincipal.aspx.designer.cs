@@ -49,6 +49,15 @@ namespace UI {
         protected global::System.Web.UI.WebControls.Label titulo;
         
         /// <summary>
+        /// Control txtNumExpediente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNumExpediente;
+        
+        /// <summary>
         /// Control lblFechaIngreso.
         /// </summary>
         /// <remarks>
@@ -391,31 +400,13 @@ namespace UI {
         protected global::System.Web.UI.WebControls.Label lblDomicilio;
         
         /// <summary>
-        /// Control otrasText.
+        /// Control domicilioText.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox otrasText;
-        
-        /// <summary>
-        /// Control lblContacto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblContacto;
-        
-        /// <summary>
-        /// Control txtContacto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContacto;
+        protected global::System.Web.UI.WebControls.TextBox domicilioText;
         
         /// <summary>
         /// Control estadoCivilText.
@@ -436,6 +427,15 @@ namespace UI {
         protected global::System.Web.UI.WebControls.TextBox trabajoText;
         
         /// <summary>
+        /// Control correoText.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox correoText;
+        
+        /// <summary>
         /// Control sexoText.
         /// </summary>
         /// <remarks>
@@ -443,6 +443,69 @@ namespace UI {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList sexoText;
+        
+        /// <summary>
+        /// Control txtnombreContacto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtnombreContacto;
+        
+        /// <summary>
+        /// Control txtparentezco.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtparentezco;
+        
+        /// <summary>
+        /// Control txtTelefContact1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTelefContact1;
+        
+        /// <summary>
+        /// Control txtTelefContact2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTelefContact2;
+        
+        /// <summary>
+        /// Control txtestadoPaciente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList txtestadoPaciente;
+        
+        /// <summary>
+        /// Control txtencamado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox txtencamado;
+        
+        /// <summary>
+        /// Control txtServicios.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtServicios;
         
         /// <summary>
         /// Control guardarBtn.

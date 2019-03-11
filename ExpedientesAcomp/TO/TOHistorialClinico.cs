@@ -9,7 +9,6 @@ namespace TO
     public class TOHistorialClinico
     {
         public int id_Historial { get; set; }
-        public string cedula { get; set; }
         public int idExpediente { get; set; }
         public bool HTA { get; set; }
         public bool hTA { get; set; }
@@ -35,19 +34,19 @@ namespace TO
         public bool heredofamiliares { get; set; }
         public string otros_Predisponentes { get; set; }
         public string farmacos_utilizados { get; set; }
+        public string grupoSanguineo { get; set; }
 
         public TOHistorialClinico()
         {
 
         }
 
-        public TOHistorialClinico(int id_Historial, string cedula, int idExpediente, bool HTA, bool hTA, bool tabaco, bool cardio,
+        public TOHistorialClinico(int id_Historial, int idExpediente, bool HTA, bool hTA, bool tabaco, bool cardio,
             bool alergias, bool DM, bool alcohol, bool AIU, bool cancer, bool neuropatias, bool drogas, string otrosPatologPerson,
             bool HTA_Fam, bool hTA_Fam, bool cardio_Fam, bool DM_Fam, bool cancer_Fam, bool neuro_Fam, string otrosHeredoFam, bool edad,
-            bool trabajo, bool heredoFamil, string otros_Predisponentes, string farmacos)
+            bool trabajo, bool heredoFamil, string otros_Predisponentes, string farmacos, string grupoSang)
         {
             this.id_Historial = id_Historial;
-            this.cedula = cedula;
             this.idExpediente = idExpediente;
             this.HTA = HTA;
             this.hTA = hTA;
@@ -73,7 +72,7 @@ namespace TO
             this.heredofamiliares = heredoFamil;
             this.otros_Predisponentes = otros_Predisponentes;
             this.farmacos_utilizados = farmacos;
-
+            this.grupoSanguineo = grupoSang;
         }
     }
 }

@@ -30,8 +30,23 @@ namespace TO
         public String ocupacion { get; set; }
         public String sexo { get; set; }
         public String domicilio { get; set; }
-        public DateTime fechaIngreso;
-        public String contactoEmergencia { get; set; }
+        private DateTime fechaIngreso;
+        public DateTime FechaIngreso
+        {
+            get { return fechaIngreso; }
+            set
+            {
+                fechaIngreso = value.Date;
+            }
+        }
+        public String correo { get; set; }
+        public String nombreContacto { get; set; }
+        public String parentezcoContacto { get; set; }
+        public String telefContact1 { get; set; }
+        public String telefContact2 { get; set; }
+        public String estado { get; set; }
+        public Boolean encamado { get; set; }
+        public String serviciosRecibe { get; set; }
 
 
         public TOExpediente()
@@ -39,7 +54,10 @@ namespace TO
 
         }
 
-        public TOExpediente(int numeroExpediente, string cedula, string primer_nombre, string segundo_nombre, string primer_apellido, string segundo_apellido, DateTime fecha_nacimiento, string num_telefono, string celular, string otro_telefono, string estado_civil, string ocupacion, String sexo, string domicilio, DateTime fechaIngreso, string contactoEmergencia)
+        public TOExpediente(int numeroExpediente, String cedula, String primer_nombre, String segundo_nombre, String primer_apellido,
+            String segundo_apellido, DateTime fecha_nacimiento, String num_telefono, String celular, String otro_telefono, String estado_civil,
+            String ocupacion, String sexo, String domicilio, DateTime fechaIngreso, String correo, String nombContacto, String parentezcoContacto,
+            String telefContac1, String telefContact2, String estado, Boolean encamado, String serviciosRecibe)
         {
             this.numExpediente = numeroExpediente;
             this.cedula = cedula;
@@ -56,9 +74,15 @@ namespace TO
             this.domicilio = domicilio;
             this.sexo = sexo;
             this.fechaIngreso = fechaIngreso;
-            this.contactoEmergencia = contactoEmergencia;
+            this.correo = correo;
+            this.nombreContacto = nombContacto;
+            this.parentezcoContacto = parentezcoContacto;
+            this.telefContact1 = telefContac1;
+            this.telefContact2 = telefContact2;
+            this.estado = estado;
+            this.encamado = encamado;
+            this.serviciosRecibe = serviciosRecibe;
         }
-
     }
 }
 

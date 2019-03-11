@@ -8,7 +8,6 @@ namespace BL
 {
     public class BLNutricion
     {
-        public string cedula { get; set; }
         public int idNutricion { get; set; }
         public int idExpediente { get; set; }
         public double pesoResultado { get; set; }
@@ -53,13 +52,12 @@ namespace BL
 
         }
 
-        public BLNutricion(string ced, int idNutric, int idExpediente, double pesoResul, string pesoEvaluac, double tallaResult, string tallaEvaluac, double IMCResult, string IMCEvaluac, 
+        public BLNutricion(int idNutric, int idExpediente, double pesoResul, string pesoEvaluac, double tallaResult, string tallaEvaluac, double IMCResult, string IMCEvaluac, 
             double pesoIdealResult, string pesoIdealEvaluac, string APP, string AHF, string medicam, string cirugias, bool alimnNoGust, string alimentNoGusCual, 
             string alimentoNoGustPorq, string alimentoPref, bool tomaAgua, double vasosDia, bool producLight, string producLightCual, string productLightPorq, 
             string alimentCaeMal, string alimentCaeMalPorq, bool tomaLicor, string tomaLicorCuantasSeman, string tomaLicorCantidad, bool fuma, string fumaCuantSemana, 
             bool actividFisica, string actividadFisicaFrecuenc, string activFisicaTipoActividad, string Dx_Nutricional, int REE, string recomendNutricionales)
         {
-            this.cedula = ced;
             this.idNutricion = idNutric;
             this.idExpediente = idExpediente;
             this.pesoResultado = pesoResul;

@@ -9,7 +9,6 @@ namespace BL
     public class BLFisicoTerapia
     {
         public int id_FisicoTerapia { get; set; }
-        public string cedula { get; set; }
         public int numExpediente { get; set; }
         public string terapeuta { get; set; }
         public string codigo_Terapeuta { get; set; }
@@ -25,11 +24,10 @@ namespace BL
 
         }
 
-        public BLFisicoTerapia(int id, string cedula, int numExpediente, string terap, string codterap, string diagMedic, string detalleAfecc, string sintomas, string observacion, 
+        public BLFisicoTerapia(int id, int numExpediente, string terap, string codterap, string diagMedic, string detalleAfecc, string sintomas, string observacion, 
             string objsTratam, string tratam_FisicoTerap)
         {
             this.id_FisicoTerapia = id;
-            this.cedula = cedula;
             this.numExpediente = numExpediente;
             this.terapeuta = terap;
             this.codigo_Terapeuta = codterap;

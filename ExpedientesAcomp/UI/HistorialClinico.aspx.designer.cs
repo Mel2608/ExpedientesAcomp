@@ -148,6 +148,24 @@ namespace UI {
         protected global::System.Web.UI.WebControls.CheckBox drogasCheck;
         
         /// <summary>
+        /// Control cardioCheck.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cardioCheck;
+        
+        /// <summary>
+        /// Control AIUCheck.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox AIUCheck;
+        
+        /// <summary>
         /// Control lblOtrosPatologPerson.
         /// </summary>
         /// <remarks>

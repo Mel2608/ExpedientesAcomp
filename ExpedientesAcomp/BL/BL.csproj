@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLCuenta.cs" />
     <Compile Include="BLExpediente.cs" />
     <Compile Include="BLFisicoTerapia.cs" />
     <Compile Include="BLHistorialClinico.cs" />
     <Compile Include="BLHojaEvolucion.cs" />
+    <Compile Include="BLManejadorCuenta.cs" />
     <Compile Include="BLManejadorExpediente.cs" />
     <Compile Include="BLManejadorHistorialClinico.cs" />
     <Compile Include="BLManejadorHojaEvolucion.cs" />
@@ -54,6 +56,16 @@
     <Compile Include="BLNutricion.cs" />
     <Compile Include="BLPsicologia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{81918e8d-46f8-49b7-abf2-ed657d700ae2}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TO\TO.csproj">
+      <Project>{f0dc3dd0-2897-45df-af6f-905226ac48ac}</Project>
+      <Name>TO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

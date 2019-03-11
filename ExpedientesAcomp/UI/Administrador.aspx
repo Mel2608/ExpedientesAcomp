@@ -1,0 +1,86 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.Master" AutoEventWireup="true" CodeBehind="Administrador.aspx.cs" Inherits="UI.Administrador" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <style type="text/css">
+        .auto-style1 {
+            left: 15px;
+            top: 8px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     <div class="container">
+        <br />
+        <br />
+
+        <div class="form-group col-sm-6">
+            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" ForeColor="#16ACB8" Text="Empleados"></asp:Label>
+        </div>
+        <asp:Literal ID="lblError" runat="server" Visible="false"></asp:Literal>
+        <br />
+        <div id="popup" style="max-height: 500px; overflow-y: scroll;" overflow-x: scroll;">
+                <asp:GridView ID="gridEmpl" class="table table-striped table-bordered" runat="server" AutoGenerateSelectButton="True" OnSelectedIndexChanged="gridEmpl_SelectedIndexChanged"></asp:GridView>
+        </div>
+
+
+        <br />
+        <br />
+        <br />
+        <div class="form-group">
+            <asp:Label ID="lblTitulo" runat="server" Font-Bold="True" Font-Size="XX-Large" ForeColor="#16ACB8" Text="Administrador de Empleados"></asp:Label>
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+            <label for="txtId">Identificador<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtId" ErrorMessage="Campo Obligatorio" ForeColor="Red" ValidationGroup="admin"></asp:RequiredFieldValidator>
+            </label>
+            &nbsp;<br />
+            <asp:TextBox type="text" class="form-control" ID="txtId" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+        </div>
+
+        <div class="form-group">
+            <label for="contraText">Contraseña</label><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="contraText" ErrorMessage="Campo obligatorio" ForeColor="Red" ValidationGroup="admin"></asp:RequiredFieldValidator>
+&nbsp;<asp:TextBox type="text" class="form-control" ID="contraText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+        </div>
+
+        <div class="form-group">
+            <label for="nombreText">Nombre</label>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="nombreText" ErrorMessage="Campo obligatorio" ForeColor="Red" ValidationGroup="admin"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="nombreText" ErrorMessage="Solo se permiten letras" ValidationExpression="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" ValidationGroup="admin" ForeColor="Red"></asp:RegularExpressionValidator>
+            <br />
+            <asp:TextBox type="text" class="form-control" ID="nombreText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+        </div>
+        <br />
+
+        <div class="form-group justify-content-around col-sm-6">
+            <label for="listRol">Rol</label>
+            <br />
+            <asp:DropDownList ID="listRol" runat="server">
+                <asp:ListItem>Terapia Física</asp:ListItem>
+                <asp:ListItem>Psicología</asp:ListItem>
+                <asp:ListItem>Nutrición</asp:ListItem>
+                <asp:ListItem>Secretaria</asp:ListItem>
+                 <asp:ListItem>Otros</asp:ListItem>
+            </asp:DropDownList>
+        </div>
+        <br />
+        <div class="col-sm-6">
+            <label for="chckEstado">Estado</label>
+            <br />
+            <asp:CheckBox class="form-check-input" type="checkbox" value="" ID="chckEstado" runat="server" Text="Habilitado" CssClass="auto-style1" />
+        </div>
+
+        <br />
+        <br />
+        <div class="row justify-content-center">
+            <asp:Button ID="idGuardar" class="btn btn-info" runat="server" Text="Guardar" OnClick="idGuardar_Click" Style="height: 40px" ValidationGroup="admin" />
+        
+        </div>
+         <br />
+        <div class="row justify-content-center">
+                <asp:Literal ID="lblMensaje" runat="server" Visible="false"></asp:Literal>
+            </div>
+        <br />
+        <br />
+
+    </div>
+</asp:Content>

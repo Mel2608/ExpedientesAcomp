@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra.Master" AutoEventWireup="true" CodeBehind="ExpedientePrincipal.aspx.cs" Inherits="UI.ExpedientePrincipal" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <%--<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -25,11 +26,11 @@
         <br />
         <div class="form-row">
             <div class="form-group col-sm-11">
-                <asp:Button type="button" class="btn btn-info" ID="btnHistorialClinico" runat="server"  Text="Historial Clínico" OnClick="btnHistorialClinico_Click" />
+                <asp:Button type="button" class="btn btn-info" ID="btnHistorialClinico" runat="server" Text="Historial Clínico" OnClick="btnHistorialClinico_Click" />
 
             </div>
             <div class="form-group col-sm-1">
-                <asp:Button type="button" class="btn btn-light" ID="consultaslBtn" runat="server" Text="Consultas"  />
+                <asp:Button type="button" class="btn btn-light" ID="consultaslBtn" runat="server" Text="Consultas" />
             </div>
         </div>
         <br />
@@ -43,9 +44,16 @@
             <br />
             <br />
         </div>
-         
-
-          <div>
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                <label for="txtNumExpediente">Número de Expediente: </label>
+                <br />
+                <asp:TextBox type="text" class="form-control" ID="txtNumExpediente" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" Enabled="False"></asp:TextBox>
+            </div>
+            <div class="form-group col-sm-6">
+            </div>
+        </div>
+        <div>
             <asp:Label ID="lblFechaIngreso" runat="server" Font-Bold="True" Text="Fecha de Ingreso"></asp:Label>
         </div>
         <div class="form-row">
@@ -56,7 +64,6 @@
                 <asp:TextBox type="text" class="form-control" ID="txtDiaIngreso" runat="server" MaxLength="2" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
 
             </div>
-
             <div class="form-group col-sm-4">
                 <label for="txtMesIngreso">Mes</label><asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtMesIngreso" ErrorMessage="Campo obligatorio" ValidationGroup="guardar" ForeColor="Red"></asp:RequiredFieldValidator>
                 &nbsp;<label for="txtMesIngreso"><asp:RegularExpressionValidator ID="RegularExpressionValidator9" runat="server" ControlToValidate="txtMesIngreso" ErrorMessage="RegularExpressionValidator" ForeColor="Red" ValidationExpression="\d*\.?\d*" ValidationGroup="guardar">Únicamente números</asp:RegularExpressionValidator>
@@ -85,7 +92,6 @@
                 <asp:TextBox type="text" class="form-control" ID="secondNameText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
             </div>
         </div>
-
         <div class="form-row">
             <div class="form-group col-sm-6">
                 <label for="lastNameText">Primer Apellido</label>
@@ -102,8 +108,6 @@
 
             </div>
         </div>
-
-
         <div class="form-row">
             <div class="form-group col-sm-6">
                 <label for="idText">Cédula</label>
@@ -118,7 +122,7 @@
             </div>
         </div>
 
-         <div>
+        <div>
             <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="Fecha de Nacimiento"></asp:Label>
         </div>
         <div class="form-row">
@@ -144,66 +148,103 @@
 
             </div>
         </div>
-         <div class="form-row">
-           <div class="form-group col-sm-4">
-     
-            <label for="phoneText">Teléfono</label>
-            <asp:TextBox type="text" class="form-control" ID="telefText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
-        </div>
+        <div class="form-row">
+            <div class="form-group col-sm-4">
 
-        <div class="form-group col-sm-4">
-            <label for="tel2">Celular</label>
-            <asp:TextBox type="text" class="form-control" ID="celularText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
-        </div>
+                <label for="phoneText">Teléfono</label>
+                <asp:TextBox type="text" class="form-control" ID="telefText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+            </div>
 
-        <div class="form-group col-sm-4">
-            <label for="descripcionTel2">Otro teléfono</label>
-            <asp:TextBox type="text" class="form-control" ID="otroTelefText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+            <div class="form-group col-sm-4">
+                <label for="tel2">Celular</label>
+                <asp:TextBox type="text" class="form-control" ID="celularText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+            </div>
+
+            <div class="form-group col-sm-4">
+                <label for="descripcionTel2">Otro teléfono</label>
+                <asp:TextBox type="text" class="form-control" ID="otroTelefText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+            </div>
         </div>
-               </div>
 
         <div>
             <asp:Label ID="lblDomicilio" runat="server" Font-Bold="False" Text="Domicilio"></asp:Label>
         </div>
         <div class="form-group ">
-           <asp:TextBox type="text" class="form-control" ID="otrasText" runat="server" TextMode="MultiLine" BorderColor="#16ACB8" BorderStyle="Solid"></asp:TextBox>
+            <asp:TextBox type="text" class="form-control" ID="domicilioText" runat="server" TextMode="MultiLine" BorderColor="#16ACB8" BorderStyle="Solid"></asp:TextBox>
         </div>
-          <div>
-            <asp:Label ID="lblContacto" runat="server" Font-Bold="False" Text="Contacto de Emergencia"></asp:Label>
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                <label for="estadoCivilText">Estado Civil</label>
+                <asp:TextBox type="text" class="form-control" ID="estadoCivilText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+                <%--  <a href="ExpedientePrincipal.aspx">ExpedientePrincipal.aspx</a>--%>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="trabajoText">Ocupación</label>
+                <asp:TextBox type="text" class="form-control" ID="trabajoText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+
+            </div>
         </div>
-         <div class="form-group ">
-                    <asp:TextBox type="text" class="form-control" ID="txtContacto" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                <label for="correoText">Correo</label>
+                <asp:TextBox type="text" class="form-control" ID="correoText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="sexoText">Sexo</label>
+                <br />
+                <asp:DropDownList ID="sexoText" class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" runat="server">
+                    <asp:ListItem>M</asp:ListItem>
+                    <asp:ListItem>F</asp:ListItem>
+                </asp:DropDownList>
+
+            </div>
         </div>
-         
-
-          <div class="form-row">
-        <div class="form-group col-sm-6">
-            <label for="estadoCivilText">Estado Civil</label>
-            <asp:TextBox type="text" class="form-control" ID="estadoCivilText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
-          <%--  <a href="ExpedientePrincipal.aspx">ExpedientePrincipal.aspx</a>--%>
+        <div class="form-group ">
+            <div class="form-group col-sm-6">
+                <label for="txtnombreContacto">Nombre del Responsable</label>
+                <asp:TextBox type="text" class="form-control" ID="txtnombreContacto" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="txtparentezco">Parentezco con el paciente</label>
+                <asp:TextBox type="text" class="form-control" ID="txtparentezco" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+            </div>
+        </div>
+        <div class="form-group ">
+            <div class="form-group col-sm-6">
+                <label for="txtTelefContact1">Celular del responsable</label>
+                <asp:TextBox type="text" class="form-control" ID="txtTelefContact1" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="txtTelefContact2">Otro teléfono</label>
+                <asp:TextBox type="text" class="form-control" ID="txtTelefContact2" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-sm-6">
+                <label for="txtestadoPaciente">Estado del Paciente: </label>
+                <br />
+                <asp:DropDownList ID="txtestadoPaciente" class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" runat="server">
+                    <asp:ListItem>Activo</asp:ListItem>
+                    <asp:ListItem>Pasivo</asp:ListItem>
+                    <asp:ListItem>Fallecido</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="txtencamado">Encamado: </label>
+                <br />
+                <asp:CheckBox class="form-check-input" type="checkbox" value="" ID="txtencamado" runat="server" Text="Encamado" onkeypress="if (event.keyCode == 13) { return false;}" />
+            </div>
+        </div>
+        <div class="form-group ">
+             <label for="txtServicios">Servicios que recibe: </label>
+            <asp:TextBox type="text" class="form-control" ID="txtServicios" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
         </div>
 
-
-        <div class="form-group col-sm-6">
-            <label for="trabajoText">Ocupación</label>
-            <asp:TextBox type="text" class="form-control" ID="trabajoText" runat="server" BorderColor="#16ACB8" BorderStyle="Solid" onkeypress="if (event.keyCode == 13) { return false;}"></asp:TextBox>
-
-        </div>
-</div>
-
-        <div class="form-group col-sm-4">
-            <label for="sexoText">Sexo</label>
-            <asp:DropDownList ID="sexoText" class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" runat="server">
-                <asp:ListItem>M</asp:ListItem>
-                <asp:ListItem>F</asp:ListItem>
-            </asp:DropDownList>
-
-        </div>
 
         <div class="form-group offset-sm-6">
-            <asp:Button ID="guardarBtn" type="button" class="btn btn-danger" runat="server" Text="Guardar"  ValidationGroup="guardar" />
+            <asp:Button ID="guardarBtn" type="button" class="btn btn-danger" runat="server" Text="Guardar" ValidationGroup="guardar" OnClick="guardarBtn_Click" />
         </div>
- 
+    </div>
     <br />
 
 

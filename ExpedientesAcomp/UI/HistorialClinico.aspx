@@ -15,6 +15,7 @@
             <asp:Label ID="titulo" runat="server" Text="Historial Clínico" Font-Bold="True" Font-Size="XX-Large" ForeColor="#16ACB8"></asp:Label>
         </div>
         <br />
+
         <br />
             <div class="form-row">
             <asp:Label ID="subGeneral" runat="server" Text="General" Font-Bold="True" Font-Size="Larger" ForeColor="#16ACB8"></asp:Label>
@@ -73,6 +74,16 @@
                 <br />
              <div class="form-group col-sm-4">
                     <asp:CheckBox class="form-check-input" type="checkbox" value="" ID="drogasCheck" runat="server" Text="Drogas" onkeypress="if (event.keyCode == 13) { return false;}"/>
+                </div>
+            </div>
+        <div class="form-row">
+            <div class="form-group col-sm-4">
+                 <asp:CheckBox class="form-check-input" type="checkbox" value="" ID="cardioCheck" runat="server" Text="Cardiopatías" onkeypress="if (event.keyCode == 13) { return false;}"/>
+                </div>
+            <div class="form-group col-sm-4">
+                 <asp:CheckBox class="form-check-input" type="checkbox" value="" ID="AIUCheck" runat="server" Text="AIU" onkeypress="if (event.keyCode == 13) { return false;}"/>
+                </div>
+            <div class="form-group col-sm-4">
                 </div>
             </div>
               <div class="form-group">
@@ -156,7 +167,7 @@
          <br />
          <br />
           <div class="form-group offset-sm-6">
-            <asp:Button ID="guardarBtn" type="button" class="btn btn-danger" runat="server" Text="Guardar"  ValidationGroup="guardar" />
+            <asp:Button ID="guardarBtn" type="button" class="btn btn-danger" runat="server" Text="Guardar"  ValidationGroup="guardar" OnClick="guardarBtn_Click" />
         </div>
         <br />
 

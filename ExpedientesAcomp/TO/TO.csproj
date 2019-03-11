@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TOCuenta.cs" />
     <Compile Include="TOHojaEvolucion.cs" />
     <Compile Include="TONutricion.cs" />
     <Compile Include="TOTerapiaFisica.cs" />
