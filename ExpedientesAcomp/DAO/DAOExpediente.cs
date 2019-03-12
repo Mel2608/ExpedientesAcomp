@@ -13,8 +13,8 @@ namespace DAO
     public class DAOExpediente
     {
 
-        //SqlConnection conexion = new SqlConnection(Properties.Settings.Default.conection);
         MySqlConnection conexion = new MySqlConnection(Properties.Settings.Default.conection);
+        //MySqlConnection conexion = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
 
 
         public void actualizarInsertarExpediente(TOExpediente exped)
@@ -137,5 +137,52 @@ namespace DAO
         //        conexion.Close();
         //    }
         //}
+
+
+        //Retorna un código HTML completo con todos los expedientes en el sistema
+        public StringBuilder cargarDatosPrincipalesExpedientes()
+        {
+            string query = "select idExpediente, cedula, primerNombre, segundoNombre, primerApellido, segundoApellido," +
+                    "nombreContacto from expediente";
+            MySqlCommand command = new MySqlCommand(query, conexion);
+
+            if (conexion.State != ConnectionState.Open)
+            {
+                conexion.Open();
+            }
+
+            MySqlDataReader reader = command.ExecuteReader();
+            StringBuilder table = new StringBuilder();
+            table.Append("<div class='container'><div class='row'><div class='col-md-12'><table id='tablaIndex' class='table table-hover table-striped'>");
+            table.Append("<thead><tr><th>Cédula</th><th>Nombre</th><th>Contacto Emergencia</th><th><center>Opciones</center></th></tr></thead>");
+            table.Append("<tbody class='tb'>");
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    table.Append("<tr>");
+                    //Cédula
+                    table.Append("<td class='size'>" + reader.GetString(1) + "</td>");
+                    //Nombre
+                    table.Append("<td class='size'>" + reader.GetString(2) + " " + reader.GetString(3) + " " + reader.GetString(4) + " " + reader.GetString(5) + "</td>");
+                    //Contacto emergencia
+                    table.Append("<td class='size'>" + reader.GetString(6) + "</td>");
+                    //Opciones
+                    table.Append("<td><center><a class='btn btn-primary' href='ExpedientePrincipal.aspx?id=" + reader.GetInt32(0) + "'><i class='fa fa-eye'></i>&nbsp Ver</a>");
+                    table.Append("&nbsp&nbsp<a class='btn btn-success' href=''><i class='fas fa-pencil-alt'></i>&nbsp Editar</a>");
+                    table.Append("</center></td>");
+
+                    table.Append("</tr>");
+                }
+            }
+            table.Append("</tbody></table></div></div></div>");
+
+            if (conexion.State != ConnectionState.Closed)
+            {
+                conexion.Close();
+            }
+            return table;
+        }
+
     }
 }

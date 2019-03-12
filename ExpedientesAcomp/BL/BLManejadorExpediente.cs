@@ -16,12 +16,19 @@ namespace BL
             dao.actualizarInsertarExpediente(convert(exped));
         }
 
-
         public BLExpediente consultarExpediente(int idExpediente)
         {
             DAOExpediente dao = new DAOExpediente();
             return convert(dao.consultarExpediente(idExpediente));
         }
+
+        public StringBuilder cargarDatosPrincipalesExpedientes()
+        {
+            DAOExpediente dao = new DAOExpediente();
+            return dao.cargarDatosPrincipalesExpedientes();
+        }
+
+
 
         public BLExpediente convert(TOExpediente toExped)
         {
@@ -40,5 +47,6 @@ namespace BL
                 blExped.correo, blExped.nombreContacto, blExped.parentezcoContacto, blExped.telefContact1, blExped.telefContact2,
                 blExped.estado, blExped.encamado, blExped.serviciosRecibe);
         }
+
     }
 }

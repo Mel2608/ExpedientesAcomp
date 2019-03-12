@@ -32,5 +32,15 @@ namespace DAO.Properties {
                 return ((string)(this["conection"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user=root;password=juan1234;database=expedientes")]
+        public string connectionStringJ {
+            get {
+                return ((string)(this["connectionStringJ"]));
+            }
+        }
     }
 }

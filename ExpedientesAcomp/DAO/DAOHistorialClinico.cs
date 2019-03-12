@@ -14,6 +14,7 @@ namespace DAO
     {
 
         MySqlConnection conexion = new MySqlConnection(Properties.Settings.Default.conection);
+        //MySqlConnection conexion = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
 
         public void actualizarInsertarHistorial(TOHistorialClinico hist)
         {

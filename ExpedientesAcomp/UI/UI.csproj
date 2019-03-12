@@ -77,8 +77,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="ExpedientePrincipal.aspx" />
+    <Content Include="Expedientes.aspx" />
     <Content Include="HistorialClinico.aspx" />
     <Content Include="HojaEvolucion.aspx" />
+    <Content Include="img\expediente-64.png" />
     <Content Include="img\logoPrincipal.png" />
     <Content Include="InicioSesion.aspx" />
     <Content Include="Nutricion.aspx" />
@@ -230,6 +232,13 @@
     </Compile>
     <Compile Include="ExpedientePrincipal.aspx.designer.cs">
       <DependentUpon>ExpedientePrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Expedientes.aspx.cs">
+      <DependentUpon>Expedientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Expedientes.aspx.designer.cs">
+      <DependentUpon>Expedientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="HistorialClinico.aspx.cs">
       <DependentUpon>HistorialClinico.aspx</DependentUpon>

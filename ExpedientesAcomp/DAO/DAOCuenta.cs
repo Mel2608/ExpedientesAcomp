@@ -13,6 +13,7 @@ namespace DAO
     public class DAOCuenta
     {
         MySqlConnection conexion = new MySqlConnection(Properties.Settings.Default.conection);
+        //MySqlConnection conexion = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
 
         public TOCuenta buscarCuenta(string idEmpleado, string contra)
         {
